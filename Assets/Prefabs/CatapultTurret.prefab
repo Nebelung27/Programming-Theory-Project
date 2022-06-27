@@ -234,6 +234,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4262571823209096}
+  - component: {fileID: 7726678571275602172}
   m_Layer: 0
   m_Name: CatapultTurret
   m_TagString: Untagged
@@ -257,6 +258,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &7726678571275602172
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1791165765685050}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.1291907, y: 1.2543222, z: 2.7293906}
+  m_Center: {x: 0.0050863028, y: 0.60528654, z: -0.30518627}
 --- !u!1 &1794820717168224
 GameObject:
   m_ObjectHideFlags: 0
