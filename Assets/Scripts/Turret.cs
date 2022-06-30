@@ -11,6 +11,22 @@ public abstract class Turret : MonoBehaviour
 
     protected abstract IEnumerator Shooting();
     protected abstract IEnumerator Reloading();
+    private void OnMouseOver()
+    {
+        RoatateTurret();
+
+        void RoatateTurret()
+        {
+            if (Input.GetAxis("Mouse ScrollWheel") > 0.0f)
+            {
+                transform.Rotate(Vector3.up * rotatingAngel);
+            }
+            else if (Input.GetAxis("Mouse ScrollWheel") < 0.0f)
+            {
+                transform.Rotate(Vector3.up * -rotatingAngel);
+            }
+        }
+    }
     private void OnMouseDown()
     {
         if (hasLaunched)
