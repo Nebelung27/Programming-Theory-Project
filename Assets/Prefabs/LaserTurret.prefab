@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1403819980
 Transform:
   m_ObjectHideFlags: 0
@@ -171,6 +171,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4940591295711036}
+  - component: {fileID: 5000676228377317919}
+  - component: {fileID: 9026727350089240439}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -194,6 +196,32 @@ Transform:
   m_Father: {fileID: 4924783946067484}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5000676228377317919
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393367149455902}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3415103, y: 2.5452843, z: 3.6490579}
+  m_Center: {x: 0.008490384, y: 1.2481143, z: 0.3226416}
+--- !u!114 &9026727350089240439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393367149455902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3955ccb867dfc4649ab69d676006b247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  laser: {fileID: 1403819979}
 --- !u!1 &1561768652258066
 GameObject:
   m_ObjectHideFlags: 0
@@ -284,8 +312,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4924783946067484}
-  - component: {fileID: -6356213826433803843}
-  - component: {fileID: 586078764}
   m_Layer: 0
   m_Name: LaserTurret
   m_TagString: Untagged
@@ -309,31 +335,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &-6356213826433803843
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1591110490357510}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.3415103, y: 2.5452843, z: 3.6490579}
-  m_Center: {x: 0.008490384, y: 1.2481143, z: 0.3226416}
---- !u!114 &586078764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1591110490357510}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3955ccb867dfc4649ab69d676006b247, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1658705116820196
 GameObject:
   m_ObjectHideFlags: 0

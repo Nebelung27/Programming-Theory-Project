@@ -3,14 +3,13 @@ using UnityEngine;
 
 public class LaserTurret : Turret
 {
+    [SerializeField]
     private GameObject laser;
 
     private void Start()
     {
-        laser = GameObject.Find("Laser");
-        laser.SetActive(false);
         shootingTime = 2.0f;
-        reloadTime = 2.0f;
+        reloadingTime = 2.0f;
     }
     protected override IEnumerator Shooting()
     {
@@ -20,6 +19,6 @@ public class LaserTurret : Turret
     }
     protected override IEnumerator Reloading()
     {
-        yield return new WaitForSeconds(reloadTime);
+        yield return new WaitForSeconds(reloadingTime);
     }
 }

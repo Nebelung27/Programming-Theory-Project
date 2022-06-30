@@ -90,6 +90,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4528818141007908}
+  - component: {fileID: 129234008399445627}
+  - component: {fileID: 2436978050624529429}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -113,6 +115,33 @@ Transform:
   m_Father: {fileID: 4081698564255386}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &129234008399445627
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025420132486370}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.0431187, y: 1.907513, z: 2.0744116}
+  m_Center: {x: 0.01043117, y: 0.9231599, z: -0.0052155256}
+--- !u!114 &2436978050624529429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025420132486370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6184b68f676e90a40b3641aef88a0b25, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shootPoint: {fileID: 4552130925665294}
+  missilePrefab: {fileID: 1552339098034316, guid: c13874774436a6a4c85449cab6e14fa4, type: 3}
 --- !u!1 &1498501323785604
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,8 +151,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4081698564255386}
-  - component: {fileID: -1830059545679754138}
-  - component: {fileID: 385905007}
   m_Layer: 0
   m_Name: MissileTurret
   m_TagString: Untagged
@@ -147,31 +174,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &-1830059545679754138
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1498501323785604}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1.907513, z: 2.0744116}
-  m_Center: {x: 0, y: 0.9231599, z: -0.0052155256}
---- !u!114 &385905007
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1498501323785604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6184b68f676e90a40b3641aef88a0b25, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1637871164663996
 GameObject:
   m_ObjectHideFlags: 0

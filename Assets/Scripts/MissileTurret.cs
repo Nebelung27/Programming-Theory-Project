@@ -1,18 +1,27 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class MissileTurret : MonoBehaviour
+public class MissileTurret : Turret
 {
-    // Start is called before the first frame update
+    [SerializeField]
+    private Transform shootPoint;
+    [SerializeField]
+    private GameObject missilePrefab;
+
     void Start()
     {
-        
+        shootingTime = 1.5f;
+        reloadingTime = 1.0f;
     }
-
-    // Update is called once per frame
-    void Update()
+    protected override IEnumerator Shooting()
     {
-        
+        var newMissil = Instantiate(missilePrefab, shootPoint.position, transform.rotation, transform);
+        newMissil.transform.SetParent(null);
+        newMissil.GetComponent<Missile>().explosionDelayTime = shootingTime;
+        return null;
+    }
+    protected override IEnumerator Reloading()
+    {
+        yield return new WaitForSeconds(reloadingTime);
     }
 }

@@ -3,9 +3,11 @@ using UnityEngine;
 
 public abstract class Turret : MonoBehaviour
 {
-    protected float shootingTime;
-    protected float reloadTime;
+    private const float rotatingAngel = 3.0f;
     private bool hasLaunched;
+
+    protected float shootingTime;
+    protected float reloadingTime;
 
     protected abstract IEnumerator Shooting();
     protected abstract IEnumerator Reloading();
