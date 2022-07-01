@@ -1,24 +1,24 @@
 using System.Collections;
 using UnityEngine;
 
-public class LaserTurret : Turret
+public class LaserTurret : Turret //Inheritance
 {
     [SerializeField]
     private GameObject laser;
 
     private void Start()
     {
-        shootingTime = 2.0f;
-        reloadingTime = 2.0f;
+        ShootingTime = 2.0f;
+        ReloadingTime = 2.0f;
     }
-    protected override IEnumerator Shooting()
+    protected override IEnumerator Shooting() //Polymorphism
     {
         laser.SetActive(true);
-        yield return new WaitForSeconds(shootingTime);
+        yield return new WaitForSeconds(ShootingTime);
         laser.SetActive(false);
     }
-    protected override IEnumerator Reloading()
+    protected override IEnumerator Reloading() //Polymorphism
     {
-        yield return new WaitForSeconds(reloadingTime);
+        yield return new WaitForSeconds(ReloadingTime);
     }
 }

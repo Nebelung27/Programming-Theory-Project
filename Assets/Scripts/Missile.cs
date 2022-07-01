@@ -5,9 +5,9 @@ public class Missile : MonoBehaviour
 {
     [SerializeField]
     private ParticleSystem explosionParticle;
-
+    [SerializeField]
     private float speed = 10.0f;
-    public float explosionDelayTime;
+    public float ExplosionDelayTime { private get; set; } // Encapsulation
 
     void Start()
     {
@@ -15,9 +15,9 @@ public class Missile : MonoBehaviour
 
         IEnumerator ExplosionDelay()
         {
-            yield return new WaitForSeconds(explosionDelayTime);
-            ParticleSystem explosion = Instantiate(explosionParticle, transform.position, transform.rotation);
-            explosion.transform.Rotate(Vector3.right * 90.0f);
+            yield return new WaitForSeconds(ExplosionDelayTime);
+            var newExplosion = Instantiate(explosionParticle, transform.position, transform.rotation);
+            newExplosion.transform.Rotate(Vector3.right * 90.0f);
             Destroy(gameObject);
         }
     }

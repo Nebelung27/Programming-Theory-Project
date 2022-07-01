@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class MissileTurret : Turret
+public class MissileTurret : Turret //Inheritance
 {
     [SerializeField]
     private Transform shootPoint;
@@ -10,18 +10,18 @@ public class MissileTurret : Turret
 
     void Start()
     {
-        shootingTime = 1.5f;
-        reloadingTime = 1.0f;
+        ShootingTime = 1.5f;
+        ReloadingTime = 1.0f;
     }
-    protected override IEnumerator Shooting()
+    protected override IEnumerator Shooting() //Polymorphism
     {
         var newMissil = Instantiate(missilePrefab, shootPoint.position, transform.rotation, transform);
         newMissil.transform.SetParent(null);
-        newMissil.GetComponent<Missile>().explosionDelayTime = shootingTime;
+        newMissil.GetComponent<Missile>().ExplosionDelayTime = ShootingTime;
         return null;
     }
-    protected override IEnumerator Reloading()
+    protected override IEnumerator Reloading() //Polymorphism
     {
-        yield return new WaitForSeconds(reloadingTime);
+        yield return new WaitForSeconds(ReloadingTime);
     }
 }

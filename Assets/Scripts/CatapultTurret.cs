@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class CatapultTurret : Turret
+public class CatapultTurret : Turret //Inheritance
 {
     [SerializeField]
     private Transform shootPoint;
@@ -15,12 +15,12 @@ public class CatapultTurret : Turret
     private void Start()
     {
         catapultAnim = GetComponentInChildren<Animator>();
-        shootingTime = 0.0f;
-        reloadingTime = 1.0f;
+        ShootingTime = 0.0f;
+        ReloadingTime = 1.0f;
 
-        LoadBomb();
+        LoadBomb(); //Abstraction
     }
-    protected override IEnumerator Shooting()
+    protected override IEnumerator Shooting() //Polymorphism
     {
         catapultAnim.SetTrigger("Fire_trig");
         LaunchBomb();
@@ -34,10 +34,10 @@ public class CatapultTurret : Turret
             bombRb.useGravity = true;
         }
     }
-    protected override IEnumerator Reloading()
+    protected override IEnumerator Reloading() //Polymorphism
     {
-        yield return new WaitForSeconds(reloadingTime);
-        LoadBomb();
+        yield return new WaitForSeconds(ReloadingTime);
+        LoadBomb(); //Abstraction
     }
     private void LoadBomb()
     {
